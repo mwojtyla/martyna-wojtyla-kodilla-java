@@ -5,10 +5,10 @@ import com.kodilla.testing.calculator.Calculator;
 
 public class TestingMain {
     public static void main(String[] args) {
-        // test 6.1 - Zadanie
+        // 6.1 - Zadanie
         System.out.println("Moduł 6. Wprowadzenie do testowania oprogramowania");
 
-        // test 6.2 - Przykład
+        // 6.2 - Przykład z modułu
         SimpleUser simpleUser = new SimpleUser("theForumUser");
 
         String result = simpleUser.getUsername();
@@ -19,7 +19,7 @@ public class TestingMain {
             System.out.println("Error!");
         }
 
-        // test 6.2 - Zadanie: pierwszy test jednostkowy
+        // 6.2 - Zadanie: pierwszy test jednostkowy
         Calculator calculator = new Calculator();
         int resultAdd = calculator.add(51,88);
         int resultSub = calculator.substract(9,33);
