@@ -8,7 +8,7 @@ public class TestingMain {
         // test 6.1 - Zadanie
         System.out.println("Moduł 6. Wprowadzenie do testowania oprogramowania");
 
-        // test 6.2 - przykład
+        // test 6.2 - Przykład
         SimpleUser simpleUser = new SimpleUser("theForumUser");
 
         String result = simpleUser.getUsername();
@@ -23,9 +23,13 @@ public class TestingMain {
         Calculator calculator = new Calculator();
         int resultAdd = calculator.add(51,88);
         int resultSub = calculator.substract(9,33);
-        System.out.println("Test of add method: " + resultAdd);
-        System.out.println("Test of substract method: " + resultSub);
+        if (resultAdd == 139 && resultSub == 24){
+            System.out.println("Test of Calculator: OK");
+        } else{
+        System.out.println("Test of Calculator: Error!");
         }
+
+    }
 }
 
 
