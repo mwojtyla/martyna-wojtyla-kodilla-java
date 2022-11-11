@@ -18,13 +18,16 @@ public class CollectionTestSuite {
     void testOddNumbersExterminatorEmptyList() {
         // Given
         ArrayList<Integer> emptyList = new ArrayList<>();
+        ArrayList<Integer> listExpected = new ArrayList<>();
         //When
         OddNumbersExterminator list = new OddNumbersExterminator();
-        ArrayList<Integer> temporaryList = list.exterminate(emptyList);
+        ArrayList<Integer> receivedList = list.exterminate(emptyList);
         //Then
-        for (Integer element: temporaryList){
-            System.out.println(element);
-        }
+        Assertions.assertEquals(listExpected, receivedList);
+
+        //for (Integer element: receivedList){
+            //System.out.println(element);
+        //}
     }
 
     @DisplayName("When use exterminate method on the list with odd and even numbers, then exterminate method return list only with even numbers")
