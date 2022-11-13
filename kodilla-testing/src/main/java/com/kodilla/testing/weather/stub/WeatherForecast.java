@@ -39,9 +39,6 @@ public class WeatherForecast {
         Map<String, Double> newMap = new HashMap<>();
         for (Map.Entry<String, Double> temperature :
                 temperatures.getTemperatures().entrySet()) {
-
-            // adding 1 celsius degree to current value
-            // as a temporary weather forecast
             newMap.put(temperature.getKey(), temperature.getValue());
         }
         List<Double> temperaturesList = new ArrayList<>(newMap.values());
