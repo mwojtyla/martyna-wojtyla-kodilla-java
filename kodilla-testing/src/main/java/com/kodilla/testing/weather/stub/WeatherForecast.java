@@ -23,9 +23,10 @@ public class WeatherForecast {
         return resultMap;
     }
 
-    double sum = 0;
-    double average = 0;
+
     public double averageTemperature(){
+        double sum = 0;
+        double average = 0;
         for (Map.Entry<String, Double> temperature :
                 temperatures.getTemperatures().entrySet()) {
                 sum = sum + temperature.getValue();
@@ -36,12 +37,7 @@ public class WeatherForecast {
     }
 
     public double medianTemperatures(){
-        Map<String, Double> newMap = new HashMap<>();
-        for (Map.Entry<String, Double> temperature :
-                temperatures.getTemperatures().entrySet()) {
-            newMap.put(temperature.getKey(), temperature.getValue());
-        }
-        List<Double> temperaturesList = new ArrayList<>(newMap.values());
+        List<Double> temperaturesList = new ArrayList<>(temperatures.getTemperatures().values());
         Collections.sort(temperaturesList);
         int n = temperaturesList.size();
         double mediana;
