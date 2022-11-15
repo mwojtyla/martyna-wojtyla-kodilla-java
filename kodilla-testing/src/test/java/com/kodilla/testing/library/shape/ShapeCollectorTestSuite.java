@@ -1,4 +1,4 @@
-package com.kodilla.testing.shape;
+package com.kodilla.testing.library.shape;
 
 import org.junit.jupiter.api.*;
 import com.kodilla.testing.shape.*;
