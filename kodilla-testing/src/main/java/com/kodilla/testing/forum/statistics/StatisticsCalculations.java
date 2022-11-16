@@ -1,28 +1,12 @@
 package com.kodilla.testing.forum.statistics;
 
 public class StatisticsCalculations {
-    Statistics statistics;
     double totalAmountOfUsers;
     double totalAmountOfPostsOnForum;
     double totalAmountOfCommentsOnForum;
     double postsAverageByUser;
     double commentsAverageByUser;
     double commentsAverageByPost;
-
-    public StatisticsCalculations(Statistics statistics) {
-        this.statistics = statistics;
-    }
-
-    public StatisticsCalculations(double totalAmountOfUsers, double totalAmountOfPostsOnForum,
-                                  double totalAmountOfCommentsOnForum, double postsAverageByUser,
-                                  double commentsAverageByUser, double commentsAverageByPost) {
-        this.totalAmountOfUsers = totalAmountOfUsers;
-        this.totalAmountOfPostsOnForum = totalAmountOfPostsOnForum;
-        this.totalAmountOfCommentsOnForum = totalAmountOfCommentsOnForum;
-        this.postsAverageByUser = postsAverageByUser;
-        this.commentsAverageByUser = commentsAverageByUser;
-        this.commentsAverageByPost = commentsAverageByPost;
-    }
 
     public double getTotalAmountOfUsers() {
         return totalAmountOfUsers;

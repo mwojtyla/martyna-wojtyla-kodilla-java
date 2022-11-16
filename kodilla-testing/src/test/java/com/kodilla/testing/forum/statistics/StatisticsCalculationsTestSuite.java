@@ -49,8 +49,7 @@ public class StatisticsCalculationsTestSuite {
     void testStatisticsCalculations0posts() {
         // Given
         when(statisticsMock.postsCount()).thenReturn(0);
-        StatisticsCalculations statisticResults = new StatisticsCalculations(statisticsMock);
-
+        StatisticsCalculations statisticResults = new StatisticsCalculations();
         // When
         statisticResults.calculateAdvStatistics(statisticsMock);
 
@@ -70,7 +69,7 @@ public class StatisticsCalculationsTestSuite {
     void testStatisticsCalculations1000posts() {
         // Given
         when(statisticsMock.postsCount()).thenReturn(1000);
-        StatisticsCalculations statisticResults = new StatisticsCalculations(statisticsMock);
+        StatisticsCalculations statisticResults = new StatisticsCalculations();
 
         // When
         statisticResults.calculateAdvStatistics(statisticsMock);
@@ -91,7 +90,7 @@ public class StatisticsCalculationsTestSuite {
     void testStatisticsCalculationsMorePosts() {
         // Given
         when(statisticsMock.commentsCount()).thenReturn(5);
-        StatisticsCalculations statisticResults = new StatisticsCalculations(statisticsMock);
+        StatisticsCalculations statisticResults = new StatisticsCalculations();
 
         // When
         statisticResults.calculateAdvStatistics(statisticsMock);
@@ -111,7 +110,7 @@ public class StatisticsCalculationsTestSuite {
     @Test
     void testStatisticsCalculationsMoreComments() {
         // Given
-        StatisticsCalculations statisticResults = new StatisticsCalculations(statisticsMock);
+        StatisticsCalculations statisticResults = new StatisticsCalculations();
 
         // When
         statisticResults.calculateAdvStatistics(statisticsMock);
@@ -134,7 +133,7 @@ public class StatisticsCalculationsTestSuite {
         // Given
         List<String> username = new ArrayList<>();
         when(statisticsMock.username()).thenReturn(username);
-        StatisticsCalculations statisticResults = new StatisticsCalculations(statisticsMock);
+        StatisticsCalculations statisticResults = new StatisticsCalculations();
 
         // When
         statisticResults.calculateAdvStatistics(statisticsMock);
@@ -161,7 +160,7 @@ public class StatisticsCalculationsTestSuite {
             username.add(user);
         }
         when(statisticsMock.username()).thenReturn(username);
-        StatisticsCalculations statisticResults = new StatisticsCalculations(statisticsMock);
+        StatisticsCalculations statisticResults = new StatisticsCalculations();
 
         // When
         statisticResults.calculateAdvStatistics(statisticsMock);
