@@ -28,6 +28,8 @@ public class ForumPost {
         return author.equals(forumPost.author);
     }
 
+
+
     @Override
     public int hashCode() {
         int result = postBody.hashCode();
