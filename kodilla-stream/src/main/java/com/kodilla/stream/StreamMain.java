@@ -28,6 +28,7 @@ public class StreamMain {
                 .collect(Collectors.toMap(ForumUser::getUserId, user -> user));
 
 
+
         theResultMapOfUsers.entrySet().stream()
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
