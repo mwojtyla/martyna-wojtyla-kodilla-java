@@ -8,7 +8,6 @@ public class OrderDTo {
         this.user = user;
         this.isOrdered = isOrdered;
     }
-
     public User getUser() {
         return user;
     }
