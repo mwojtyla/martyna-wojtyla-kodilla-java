@@ -1,6 +1,4 @@
-package com.kodilla.spring;
-
-import com.kodilla.spring.forum.ForumUser;
+package com.kodilla.spring.forum;
 
 import static org.junit.jupiter.api.Assertions.*;
 
