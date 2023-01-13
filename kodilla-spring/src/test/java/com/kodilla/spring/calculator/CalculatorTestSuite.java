@@ -20,4 +20,5 @@ public class CalculatorTestSuite {
         //Then
         // do nothing
     }
+
 }
