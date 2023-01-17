@@ -9,4 +9,5 @@ include 'kodilla-spring-info'
 include 'kodilla-good-patterns'
 include 'kodilla-spring-web'
 include 'kodilla-additional-tasks'
+include 'kodilla-patterns'
 
