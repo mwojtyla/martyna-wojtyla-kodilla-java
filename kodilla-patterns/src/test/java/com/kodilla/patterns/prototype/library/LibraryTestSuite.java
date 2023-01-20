@@ -1,10 +1,8 @@
 package com.kodilla.patterns.prototype.library;
 
-
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
-import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
