@@ -1,5 +1,6 @@
 package com.kodilla.jdbc;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import java.sql.ResultSet;
@@ -10,11 +11,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DbManagerTestSuite {
 
+    // Given
+    DbManager dbManager = DbManager.getInstance();
+
     @Test
     void testConnect() throws SQLException {
         //Given
         //When
-        DbManager dbManager = DbManager.getInstance();
         //Then
         assertNotNull(dbManager.getConnection());
     }
@@ -22,8 +25,6 @@ class DbManagerTestSuite {
     @Test
     void testSelectUsers() throws SQLException {
         //Given
-        DbManager dbManager = DbManager.getInstance();
-
         //When
         String sqlQuery = "SELECT * FROM USERS";
         Statement statement = dbManager.getConnection().createStatement();
@@ -45,8 +46,6 @@ class DbManagerTestSuite {
     @Test
     void testSelectUsersAndTasks() throws SQLException {
         //Given
-        DbManager dbManager = DbManager.getInstance();
-
         //When
         String sqlQuery = """
                 SELECT U.FIRSTNAME, U.LASTNAME, I.SUMMARY
@@ -72,8 +71,6 @@ class DbManagerTestSuite {
     @Test
     void testSelectUsersAndPosts() throws SQLException {
         //Given
-        DbManager dbManager = DbManager.getInstance();
-
         //When
         String sqlQuery = """
                 SELECT U.FIRSTNAME, U.LASTNAME, COUNT(*) AS POSTS_NUMBER
