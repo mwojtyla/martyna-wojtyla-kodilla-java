@@ -11,4 +11,6 @@ include 'kodilla-spring-web'
 include 'kodilla-additional-tasks'
 include 'kodilla-patterns'
 include 'kodilla-jdbc'
+include 'kodilla-hibernate'
+
 
