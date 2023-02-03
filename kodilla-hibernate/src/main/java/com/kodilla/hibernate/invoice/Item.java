@@ -2,6 +2,7 @@ package com.kodilla.hibernate.invoice;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import org.hibernate.annotations.Cascade;
 
 import java.math.BigDecimal;
 
@@ -35,6 +36,7 @@ public class Item {
     }
 
     @ManyToOne
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     @JoinColumn(name = "PRODUCT_ID")
     public Product getProduct() {
         return product;
@@ -56,6 +58,7 @@ public class Item {
     }
 
     @ManyToOne
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
     @JoinColumn(name = "INVOICE_ID")
     public Invoice getInvoice() {
         return invoice;

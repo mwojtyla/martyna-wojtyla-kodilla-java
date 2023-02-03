@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="PRODUCT")
+@Table(name = "PRODUCT")
 public class Product {
     private int id;
     private String name;
@@ -30,7 +30,7 @@ public class Product {
     }
 
     @NotNull
-    @Column(name="PRODUCT_NAME")
+    @Column(name = "PRODUCT_NAME")
     public String getName() {
         return name;
     }
