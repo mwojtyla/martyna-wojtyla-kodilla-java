@@ -35,10 +35,10 @@ public class InvoiceDaoTestSuite {
         product2.getItems().add(item3);
         product3.getItems().add(item4);
 
-        item1.setProduct(product1);
+        /*item1.setProduct(product1);
         item2.setProduct(product1);
         item3.setProduct(product2);
-        item4.setProduct(product3);
+        item4.setProduct(product3);*/
 
         item1.setInvoice(invoice);
         item2.setInvoice(invoice);

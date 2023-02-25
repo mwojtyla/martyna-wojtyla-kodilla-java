@@ -114,12 +114,12 @@ public class CompanyDaoTestSuite {
 
         } finally {
             //CleanUp
-           /* companyDao.deleteById(softwareMachineId);
+            companyDao.deleteById(softwareMachineId);
             companyDao.deleteById(dataMaestersId);
             companyDao.deleteById(greyMatterId);
             employeeDao.deleteById(johnSmithId);
             employeeDao.deleteById(stephanieClarcksonId);
-            employeeDao.deleteById(lindaKovalskyId);*/
+            employeeDao.deleteById(lindaKovalskyId);
         }
     }
 }
