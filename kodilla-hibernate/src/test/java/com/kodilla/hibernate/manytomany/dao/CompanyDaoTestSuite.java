@@ -2,6 +2,7 @@ package com.kodilla.hibernate.manytomany.dao;
 
 import com.kodilla.hibernate.manytomany.Company;
 import com.kodilla.hibernate.manytomany.Employee;
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,7 +12,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-
+@Transactional
 @SpringBootTest
 public class CompanyDaoTestSuite {
 
@@ -67,6 +68,7 @@ public class CompanyDaoTestSuite {
         }
     }
 
+
     @Test
     void testNamedQueries(){
         //Given
@@ -114,12 +116,12 @@ public class CompanyDaoTestSuite {
 
         } finally {
             //CleanUp
-            companyDao.deleteById(softwareMachineId);
+           /* companyDao.deleteById(softwareMachineId);
             companyDao.deleteById(dataMaestersId);
             companyDao.deleteById(greyMatterId);
             employeeDao.deleteById(johnSmithId);
             employeeDao.deleteById(stephanieClarcksonId);
-            employeeDao.deleteById(lindaKovalskyId);
+            employeeDao.deleteById(lindaKovalskyId);*/
         }
     }
 }

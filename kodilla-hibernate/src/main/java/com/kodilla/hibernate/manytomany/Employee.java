@@ -1,16 +1,26 @@
 package com.kodilla.hibernate.manytomany;
 
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQuery(
-        name = "Employee.retrieveEmployeesWithTheGivenLastname",
-        query = "FROM Employee WHERE lastname = :LASTNAME"
-)
+@NamedQueries({
+        @NamedQuery(
+            name = "Employee.retrieveEmployeesWithTheGivenLastname",
+            query = "FROM Employee WHERE lastname = :LASTNAME"
+            ),
+        @NamedQuery(
+            name = "Employee.retrieveEmployeeByPartOfTheLastname",
+            query = "FROM Employee WHERE firstname LIKE concat('%', :partOfName, '%')" +
+                    "or lastname LIKE concat('%', :partOfName, '%') "
+            )
+        })
 
+@Service
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {
@@ -72,5 +82,6 @@ public class Employee {
     public void setCompanies(List<Company> companies) {
         this.companies = companies;
     }
+
 }
 

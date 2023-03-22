@@ -1,8 +1,7 @@
 package com.kodilla.hibernate.invoice;
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
-
+;
 import java.util.ArrayList;
 import java.util.List;
 

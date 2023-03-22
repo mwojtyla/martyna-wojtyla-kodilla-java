@@ -1,7 +1,11 @@
 package com.kodilla.hibernate.manytomany;
 
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import org.hibernate.annotations.NamedNativeQuery;
+import org.hibernate.annotations.NamedQuery;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +16,13 @@ import java.util.List;
                 " WHERE LEFT(COMPANY_NAME,3) = 'Sof'",
         resultClass = Company.class
 )
+
+@NamedQuery(
+        name = "Company.retrieveCompaniesByPartOfTheName",
+        query = "FROM Company WHERE name LIKE concat('%', :partOfName, '%') "
+)
+
+@Service
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
@@ -57,4 +68,6 @@ public class Company {
     public void setEmployees(List<Employee> employees) {
         this.employees = employees;
     }
+
+
 }
