@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class FacebookTestingApp {
-    public static final String XPATH_Cookies = "//div[contains(@class, \"_4-i2 _pig _al5h _al7j _50f4\")]/div/button[2]";
-    public static final String XPATH_Create_Account = "//div[contains(@class, \"_6luv _52jv\")]/form/div[5]/a";
+    public static final String XPATH_COOKIES = "//div[contains(@class, \"_4-i2 _pig _al5h _al7j _50f4\")]/div/button[2]";
+    public static final String XPATH_CREATE_ACCOUNT = "//div[contains(@class, \"_6luv _52jv\")]/form/div[5]/a";
     public static final String XPATH_SELECT_DAY = "//div[@class=\"_58mq _5dbb\" and @id=\"birthday_wrapper\"]/div[2]/span/span/select[1]";
     public static final String XPATH_SELECT_MONTH = "//div[@class=\"_58mq _5dbb\" and @id=\"birthday_wrapper\"]/div[2]/span/span/select[2]";
     public static final String XPATH_SELECT_YEAR = "//div[@class=\"_58mq _5dbb\" and @id=\"birthday_wrapper\"]/div[2]/span/span/select[3]";
@@ -17,8 +17,8 @@ public class FacebookTestingApp {
         WebDriver driver = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
         driver.get("https://www.facebook.com/");
 
-        driver.findElement(By.xpath(XPATH_Cookies)).click();
-        driver.findElement(By.xpath(XPATH_Create_Account)).click();
+        driver.findElement(By.xpath(XPATH_COOKIES)).click();
+        driver.findElement(By.xpath(XPATH_CREATE_ACCOUNT)).click();
 
         Thread.sleep(2000);
 
